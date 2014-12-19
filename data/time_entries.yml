@@ -1,0 +1,39 @@
+clients: 
+  - cli_name: Builder's League United
+  - cli_name: Reliable Excavation and Demolition
+  - cli_name: Foraker
+
+projects: 
+  - pro_name: User Testing and Reporting
+  - pro_name: Overhead
+  - pro_name: Development of new features
+  - pro_name: Bugs
+  - pro_name: Technical Support
+
+open_time_entries:
+    - id: 1
+      client_name: Foraker
+      project_name: Overhead
+      description: Emails
+      starts: 11:00AM
+      ends: 11:30AM
+
+time_entries:
+    - id: 1
+      client_name: Foraker
+      project_name: Overhead
+      description: Emails
+      starts: 11:00AM
+      ends: 11:30AM
+    - id: 2
+      client_name: Reliable Excavation and Demolition
+      project_name: User Testing and Reporting
+      description: Building something
+      starts: 10:00AM
+      ends: 11:00AM
+    - id: 3
+      client_name: Builder's League United
+      project_name: Development of new features
+      description: Email
+      starts: 9:00AM
+      ends: 10:00AM

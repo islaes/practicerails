@@ -1,0 +1,150 @@
+<div class="row">
+  <div class="col-md-7">
+    <!--Day buttons-->
+    <div class="btn-group" role="group" aria-label="Dates">
+      <button type="button" class="btn btn-default"><</button>
+      <button type="button" class="btn btn-default">Sun</button>
+      <button type="button" class="btn btn-default">Mon</button>
+      <button type="button" class="btn btn-default">Tue</button>
+      <button type="button" class="btn btn-default">Wed</button>
+      <button type="button" class="btn btn-default">Thu</button>
+      <button type="button" class="btn btn-default">Fri</button>
+      <button type="button" class="btn btn-default">Sat</button>
+      <button type="button" class="btn btn-default">></button>
+    </div>  
+    <!-- End of day buttons -->
+    <br><br>
+    <!--Time entry form -->
+    <form role="form">
+      <div class="form-group">
+        <label for="Clients">Client </label>
+          <select name="Clients">
+              <% @clients.each do |client| %>
+              <option><%= client.cli_name %></option>
+            <% end %>
+          </select>
+      </div>
+      <div class="form-group">
+        <label for="Projects">Project </label>
+          <select name="Projects">
+              <% @projects.each do |project| %>
+              <option><%= project.pro_name %></option>
+            <% end %>
+          </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input name="theDate" size="12">
+        <input type="button" value="Today" onclick="var theDate = new Date(); this.form.theDate.value = theDate.toLocaleDateString();">
+      </div>   
+      <div class="form-group">
+        <label for="decription">Description</label><br>
+        <textarea name="Description" rows="4" cols="75">
+        </textarea>
+      </div> 
+      <div class="form-group">
+        <label for="start">Start </label>
+        <input id="field" type="text" name="starttime" value="" size="15" />
+        <input type="button" value="Now" onclick="var starttime = new Date(); this.form.starttime.value = starttime.toLocaleTimeString();">
+      </div>  
+      <div class="form-group">
+        <label for="date">End </label>
+        <input id="field" type="text" name="endtime" value="" size="15" />
+        <input type="button" value="Now" onclick="var endtime = new Date(); this.form.endtime.value = endtime.toLocaleTimeString();">
+      </div> 
+    <!--Collapsable section-->
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div id="headingTwo">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFields" aria-expanded="false" aria-controls="collapseFields">
+           + Additional Fields
+          </a>
+        </div>
+        <div id="collapseFields" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseFields">
+          <div class="panel-body">
+              <form role="form">
+                <div class="form-group">
+                  <label for="internal_decription">Internal Description</label><br>
+                    <textarea name="Internal_Description" rows="4" cols="75">
+                    </textarea>
+                </div>
+                <div class="form-group">
+                  <input type="checkbox"> Mark for Review
+                  <br>
+                  <input type="checkbox"> Add to My Shortcuts
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of collapsible section-->
+      <input type="submit" value="Save & Close Previous" />
+      <input type="button" value="Save" />
+      <a href="#">Cancel</a>
+    </form>
+    <!--End of time entry form-->
+    <hr>
+    <!--Open time entry-->
+    <ul>
+      <% @open_time_entries.each do |open_time_entry| %>
+        <li class="open-time-entry">
+          <h5><%= open_time_entry.client_name %>- <%= open_time_entry.project_name %></h5>
+          <%= open_time_entry.name %>
+          <p><%= open_time_entry.description %></p>
+          <%= open_time_entry.starts %> - <%= open_time_entry.ends %>
+        </li>
+      <% end %>
+    </ul>
+    <hr>
+    <!--Completed time entries-->
+    <ul>
+    	<% @time_entries.each do |time_entry| %>
+    		<li class="time-entry">
+          <h5><%= time_entry.client_name %>- <%= time_entry.project_name %></h5>
+          <%= time_entry.name %>
+          <p><%= time_entry.description %></p>
+    			<%= time_entry.starts %> - <%= time_entry.ends %>
+    		</li>
+    	<% end %>
+    </ul>
+  </div>
+  <div class="col-md-1">
+    <!--Spacers go to space-->
+  </div>
+  <!--Begin Sidebar-->
+ <div class="col-md-4">
+  <div id="TotalTime">
+     <h2>Total Time</h2>
+     <h5><strong>December 18, 2014</strong></h5>
+     <p># hours</p>
+     <p># billable hours</p>
+     <p>% billable</p>
+     <p>% productive</p>
+    <br>
+     <h5><strong>December 14-20, 2014</strong></h5>
+     <p># hours</p>
+     <p># billable hours</p>
+     <p>% billable</p>
+     <p>% productive</p>
+ </div>
+ 
+ <hr>
+
+ <div id="MyShortcuts">
+  <h3>My Shortcuts</h3>
+     <h4>Foraker Labs</h5>
+      <h5>Overhead</h5>
+      <p><a>Morning Emails </a>(x)</p>
+      <p><a>Something else </a>(x)</p>
+      <h5>Training and Learning</h5>
+      <p><a>Ruby Practice </a>(x)</p>
+     <h4>Reliable Excavation and Demolition</h4>
+      <h5>Training</h5>
+      <p><a>Technical Support </a>(x)</p>
+     <h4>Builders League United</h4>
+      <h5>Development</h5>
+      <p><a>Development of new features </a>(x)</p>
+      <p><a>Bugs </a>(x)</p>
+ </div>
+</div>
