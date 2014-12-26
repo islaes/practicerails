@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'sass-rails'
+gem 'font-awesome-sass'
