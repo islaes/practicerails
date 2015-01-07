@@ -1,0 +1,30 @@
+//Time Entry Forms stuff
+.panel-elapse {
+  border: 1px dashed $elapse-red;
+  padding: 2px;
+}
+
+.time_form_button {
+  display: inline;
+  padding: 0;
+  margin: -3px 0 0 0;
+  height: 29px;
+  width: 60px;
+  background: $elapse-lightgreen;
+  border: 1px solid $elapse-darkgreen;
+}
+
+.time_form_submit_button {
+  display: inline;
+  padding: 0 5px 0 5px;
+  margin: -3px 0 0 0;
+  height: 29px;
+  color: $elapse-white;
+  background: $elapse-navy;
+  border: 1px solid $elapse-darknavy;
+}
+
+.additional_fields {
+  border: 1px dashed $elapse-red;
+  padding: 2px;
+}

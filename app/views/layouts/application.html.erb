@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Practicerails</title>
+  <title>eLapse</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,13 +10,11 @@
 
 <body>
 
-<%= render '/time_entries/navigation' %>
-
-<div class='container'>
-  <%= yield %>
-</div>
-
-<%= render '/time_entries/footer' %>
+  <%= render '/time_entries/navigation' %>
+  <div class="container">
+    <%= yield %>
+    <%= render '/time_entries/footer' %>
+  </div>
 
 </body>
 </html>

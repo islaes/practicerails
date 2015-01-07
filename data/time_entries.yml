@@ -1,12 +1,12 @@
 clients: 
-  - cli_name: 
+  - cli_name: Client
   - cli_name: Builder's League United
   - cli_name: Reliable Excavation and Demolition
   - cli_name: Foraker
 
 projects:
-  - pro_name: 
-  - pro_name: User Testing and Reporting
+  - pro_name: Project
+  - pro_name: User Testing and Reporting 
   - pro_name: Overhead
   - pro_name: Development of new features
   - pro_name: Bugs
@@ -31,14 +31,16 @@ time_entries:
       ends: 11:30AM
       date: Dec 18 2014
       totaltime: 0.50 hours
+      ptnumber: "#123456"
     - id: 2
       client_name: Reliable Excavation and Demolition
-      project_name: User Testing and Reporting
+      project_name: User Testing and Reporting 
       description: Building something
       starts: 10:00AM
       ends: 11:00AM
       date: Dec 18 2014
       totaltime: 1.00 hours
+      ptnumber: "#123456"
     - id: 3
       client_name: Builder's League United
       project_name: Development of new features
@@ -47,3 +49,4 @@ time_entries:
       ends: 10:00AM
       date: Dec 18 2014
       totaltime: 1.00 hours
+      ptnumber: "#123456"

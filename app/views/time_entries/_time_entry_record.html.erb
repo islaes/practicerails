@@ -1,0 +1,93 @@
+<div id="time_entry_record">
+      <h4>Open Time Entries</h4>
+      <div class="time_entry_block">
+        <ul>
+          <% @open_time_entries.each do |open_time_entry| %>
+            <li class="time-entry">
+              <div class="row">
+                <div class="col-md-5">
+                  <a href="#">Edit</a> | <a href="#">Delete</a> | <a href="#">Clone</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#">Add to Shortcuts</a>
+                </div>
+                <div class="col-md-4">
+                  <b><%= open_time_entry.totaltime %></b>
+                  <br>&nbsp;
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <b><%= open_time_entry.client_name %></b><br>
+                  <%= open_time_entry.project_name %>
+                  <%= open_time_entry.name %><br>
+                  <%= open_time_entry.ptnumber %>
+                  <br>&nbsp;
+                </div>
+                <div class="col-md-3">
+                  <%= open_time_entry.description %>
+                </div>
+                <div class="col-md-4">
+                  <div id="time_entry_icons"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>&nbsp;<span class="glyphicon glyphicon-time" aria-hidden="true"></span></div>
+                  <%= open_time_entry.starts %> - <%= open_time_entry.ends %>
+                  <br>
+                  <%= open_time_entry.date %><br>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div>
+
+      <!--Completed time entries-->
+      <div class="row">
+        <div class="col-md-7">
+          <h4>Saved Time Entries</h4>
+        </div>
+        <div class="col-md-4 pull-right">
+          <h5>
+            <a href="#">Share Time Entries &nbsp;<span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
+          </h5>
+        </div>
+      </div>
+        <div class="time_entry_block">
+        <ul>
+          <% @time_entries.each do |time_entry| %>
+            <li class="time-entry">
+              <div class="row">
+                <div class="col-md-5">
+                  <a href="#">Edit</a> | <a href="#">Delete</a> | <a href="#">Clone</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#">Add to Shortcuts</a>
+                </div>
+                <div class="col-md-4">
+                  <b><%= time_entry.totaltime %></b>
+                  <br>&nbsp;
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <b><%= time_entry.client_name %></b><br>
+                  <%= time_entry.project_name %>
+                  <%= time_entry.name %><br>
+                  <%= time_entry.ptnumber %>
+                  <br>&nbsp;
+                </div>
+                <div class="col-md-3">
+                  <%= time_entry.description %>
+                </div>
+                <div class="col-md-4">
+                  <div id="time_entry_icons"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>&nbsp;<span class="glyphicon glyphicon-time" aria-hidden="true"></span></div>
+                  <%= time_entry.starts %> - <%= time_entry.ends %>
+                  <br>
+                  <%= time_entry.date %><br>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+// Breadcrumbs
+
+.elapse_breadcrumb_bar {
+  padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+  background-color: $elapse-breadcrumb-bg;
+  height: 35px;
+  margin-top: -20px;
+  margin-bottom: $line-height-computed;
+  
+    a {
+      color: $elapse-breadcrumb-color;
+      text-decoration: none;
+    
+      &:hover {
+        color: $elapse-breadcrumb-active-color;
+      }
+    }
+
+  .elapse_breadcrumb {
+    list-style: none;
+    > li {
+      display: inline-block;
+
+      + li:before {
+        content: "#{$breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+        padding: 0 5px;
+        color: $elapse-breadcrumb-color;
+      }
+    }
+  }
+
+  .elapse_month_name {
+    display: inline-block;
+    color: $elapse-breadcrumb-monthcolor;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+
+}
+
