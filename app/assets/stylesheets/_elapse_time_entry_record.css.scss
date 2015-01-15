@@ -1,0 +1,95 @@
+//Time Entries at bottom
+
+#time_entry_record {
+  //border: 1px solid #f00;
+  margin: 0;
+  padding: 0;
+  
+  h4 {
+    letter-spacing: 2px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  span.time_entry_icons {
+  color: $elapse-red;
+  }
+}
+
+//Open Entries
+.open_time_entry_block {
+  border: 1px solid $elapse-darkskyblue;
+  background-color: $elapse-darkskyblue;
+  padding-top: 5px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  a.deletelink {
+    color: $elapse-red;
+  }
+  .elapse-record-top-open {
+    background: $elapse-white;
+    border-top: 1px solid $elapse-darksoftgreen;
+    border-bottom: 1px solid #daf1f7;
+    margin: 0;
+    padding: 2px 0 2px 0;
+
+    span.elapse-open-hours {
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+      color: $elapse-navy;
+    }
+  }
+  .elapse-open-record-content {
+    background-color: $elapse-skyblue;
+    margin: 0;
+    padding: 2px 0 0 0;
+  }
+}
+
+//Saved Entries
+.saved_time_entry_block {
+  border: 1px solid $elapse-darksoftgreen;
+  background-color: $elapse-darksoftgreen;
+  padding-top: 5px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  a.deletelink {
+    color: $elapse-red;
+  }
+  .elapse-record-top-saved {
+    background: $elapse-white;
+    border-top: 1px solid $elapse-darksoftgreen;
+    border-bottom: 1px solid #eaf3e1;
+    margin: 0;
+    padding: 5px 0 2px 0;
+
+    span.elapse-saved-hours {
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+      color: $elapse-darkgreen;
+    }
+    span.saved-hours-hours {
+      color: $elapse-huntergreen;
+    }
+  }
+  .elapse-saved-record-content {
+    background-color: $elapse-softgreen;
+    margin: 0;
+    padding: 2px 0 0 0;
+  }
+}
+
+
+
+
+
+
+
+

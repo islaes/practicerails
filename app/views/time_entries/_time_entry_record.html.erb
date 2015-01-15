@@ -1,22 +1,23 @@
+<hr>
+
 <div id="time_entry_record">
-      <h4>Open Time Entries</h4>
-      <div class="time_entry_block">
+      <h4>OPEN ENTRIES</h4>
+      <div class="open_time_entry_block">
         <ul>
           <% @open_time_entries.each do |open_time_entry| %>
             <li class="time-entry">
-              <div class="row">
+              <div class="row elapse-record-top-open">
                 <div class="col-md-5">
-                  <a href="#">Edit</a> | <a href="#">Delete</a> | <a href="#">Clone</a>
-                </div>
-                <div class="col-md-3">
-                  <a href="#">Add to Shortcuts</a>
+                  <a href="#">Edit</a> | <a href="#" class="deletelink">Delete</a> | <a href="#">Clone</a>
                 </div>
                 <div class="col-md-4">
-                  <b><%= open_time_entry.totaltime %></b>
-                  <br>&nbsp;
+                  <a href="#">Add to Shortcuts</a>
+                </div>
+                <div class="col-md-3">
+                  <span class="elapse-open-hours">?</span> hours
                 </div>
               </div>
-              <div class="row">
+              <div class="row elapse-open-record-content">
                 <div class="col-md-5">
                   <b><%= open_time_entry.client_name %></b><br>
                   <%= open_time_entry.project_name %>
@@ -24,14 +25,14 @@
                   <%= open_time_entry.ptnumber %>
                   <br>&nbsp;
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <%= open_time_entry.description %>
                 </div>
-                <div class="col-md-4">
-                  <div id="time_entry_icons"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>&nbsp;<span class="glyphicon glyphicon-time" aria-hidden="true"></span></div>
+                <div class="col-md-3">
+                  <div id="time_entry_icons"><!--icons go here-->&nbsp;</div>
                   <%= open_time_entry.starts %> - <%= open_time_entry.ends %>
                   <br>
-                  <%= open_time_entry.date %><br>
+                  <%= open_time_entry.date %>
                 </div>
               </div>
             </li>
@@ -42,52 +43,56 @@
 
       <!--Completed time entries-->
       <div class="row">
-        <div class="col-md-7">
-          <h4>Saved Time Entries</h4>
+        <div class="col-md-9">
+          <h4>SAVED ENTRIES</h4>
         </div>
-        <div class="col-md-4 pull-right">
+        <div class="col-md-3">
           <h5>
             <a href="#">Share Time Entries &nbsp;<span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
           </h5>
         </div>
       </div>
-        <div class="time_entry_block">
-        <ul>
-          <% @time_entries.each do |time_entry| %>
-            <li class="time-entry">
-              <div class="row">
-                <div class="col-md-5">
-                  <a href="#">Edit</a> | <a href="#">Delete</a> | <a href="#">Clone</a>
+        <div class="saved_time_entry_block">
+          <ul>
+            <% @time_entries.each do |time_entry| %>
+              <li class="time-entry">
+                <div class="row elapse-record-top-saved">
+                  <div class="col-md-5">
+                    <a href="#">Edit</a> | <a href="#" class="deletelink">Delete</a> | <a href="#">Clone</a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="#">Add to Shortcuts</a>
+                  </div>
+                  <div class="col-md-3 record-hours">
+                    <span class="elapse-open-hours"><%= time_entry.totaltime %></span> <span class="saved-hours-hours">hours</span>
+                  </div>
                 </div>
-                <div class="col-md-3">
-                  <a href="#">Add to Shortcuts</a>
+                <div class="row elapse-saved-record-content">
+                  <div class="col-md-5">
+                    <b><%= time_entry.client_name %></b><br>
+                    <%= time_entry.project_name %>
+                    <%= time_entry.name %><br>
+                    <%= time_entry.ptnumber %>
+                    <br>&nbsp;
+                  </div>
+                  <div class="col-md-4">
+                    <%= time_entry.description %>
+                  </div>
+                  <div class="col-md-3">
+                    <span class="time_entry_icons time_entry_icons"><!--icons go here--></span><br>
+                    <%= time_entry.starts %>&nbsp;-&nbsp;<%= time_entry.ends %>
+                    <br>
+                    <%= time_entry.date %><br>
+                  </div>
                 </div>
-                <div class="col-md-4">
-                  <b><%= time_entry.totaltime %></b>
-                  <br>&nbsp;
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-5">
-                  <b><%= time_entry.client_name %></b><br>
-                  <%= time_entry.project_name %>
-                  <%= time_entry.name %><br>
-                  <%= time_entry.ptnumber %>
-                  <br>&nbsp;
-                </div>
-                <div class="col-md-3">
-                  <%= time_entry.description %>
-                </div>
-                <div class="col-md-4">
-                  <div id="time_entry_icons"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>&nbsp;<span class="glyphicon glyphicon-time" aria-hidden="true"></span></div>
-                  <%= time_entry.starts %> - <%= time_entry.ends %>
-                  <br>
-                  <%= time_entry.date %><br>
-                </div>
-              </div>
-            </li>
-          <% end %>
-        </ul>
-    </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div>
+          <br>
+          <span class="glyphicon glyphicon-transfer time_entry_icons" aria-hidden="true"></span> = Overlap&nbsp;&nbsp; <span class="glyphicon glyphicon-time time_entry_icons" aria-hidden="true"></span> = After Hours 
+          <br>&nbsp;<br>
+        </div>
   </div>
 </div>

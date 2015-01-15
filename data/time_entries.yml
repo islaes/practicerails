@@ -12,6 +12,13 @@ projects:
   - pro_name: Bugs
   - pro_name: Technical Support
 
+descriptions:
+  - desc_name: Description
+  - desc_name: "As a player, I would like to capture the point"
+  - desc_name: "As a user, I would like to sign in"
+  - desc_name: "As Foraker, I would like to have a staging server."
+  - desc_name: "As RED, I would like to have lots of money."
+
 open_time_entries:
     - id: 1
       client_name: Foraker
@@ -19,8 +26,7 @@ open_time_entries:
       description: Emails
       starts: 11:00AM
       ends: 11:30AM
-      date: Dec 18 2014
-      totaltime: 0.50 hours
+      date: Wed, Dec 18 2014
 
 time_entries:
     - id: 1
@@ -29,8 +35,8 @@ time_entries:
       description: Emails
       starts: 11:00AM
       ends: 11:30AM
-      date: Dec 18 2014
-      totaltime: 0.50 hours
+      date: Wed, Dec 18 2014
+      totaltime: "0.50"
       ptnumber: "#123456"
     - id: 2
       client_name: Reliable Excavation and Demolition
@@ -38,8 +44,8 @@ time_entries:
       description: Building something
       starts: 10:00AM
       ends: 11:00AM
-      date: Dec 18 2014
-      totaltime: 1.00 hours
+      date: Wed, Dec 18 2014
+      totaltime: "1.00"
       ptnumber: "#123456"
     - id: 3
       client_name: Builder's League United
@@ -47,6 +53,6 @@ time_entries:
       description: Email
       starts: 9:00AM
       ends: 10:00AM
-      date: Dec 18 2014
-      totaltime: 1.00 hours
+      date: Wed, Dec 18 2014
+      totaltime: "1.00"
       ptnumber: "#123456"

@@ -15,6 +15,10 @@ class TimeEntriesController < ApplicationController
       OpenStruct.new(project)
     end
 
+    @descriptions = data["descriptions"].map do |description|
+      OpenStruct.new(description)
+    end
+
     @time_entries = data["time_entries"].map do |time_entry|
       OpenStruct.new(time_entry)
     end

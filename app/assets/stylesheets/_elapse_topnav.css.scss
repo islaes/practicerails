@@ -11,6 +11,7 @@
 .navbar-elapse {
   background-color: $navbar-elapse-bg;
   border-color: $navbar-elapse-border;
+  border-radius: 0;
 
   .navbar-brand {
     color: $navbar-elapse-brand-color;
@@ -20,6 +21,10 @@
       color: $navbar-elapse-brand-hover-color;
       background-color: $navbar-elapse-brand-hover-bg;
     }
+  }
+
+  .elapse-menu-icon {
+    color: $quotecolor;
   }
 
   .navbar-text {

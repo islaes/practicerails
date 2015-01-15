@@ -2,16 +2,35 @@
 //Colors
 $elapse-background-color: #fff;
 $grey-background-color: #F0f2f4;
+$elapse-links: #0086CB;
 $primary-color: #555;
-$elapse-white: #fff;
 $shader-holder: #efefef;
 $shader-holder2: #ddd;
+//general
+$elapse-black: #000;
+$elapse-white: #fff;
+
+//faded
+$elapse-fadedred: #FBF7F8;
+$elaspse-fadedredtext: #CACACA;
+$elapse-fadedblue: #F0F2F4;
+
+//red
 $elapse-red: #7A0218;
+
+//green
 $elapse-lightgreen: #DFECD1;
 $elapse-darkgreen: #AACC84;
+$elapse-softgreen: #F9FCF7;
+$elapse-darksoftgreen: #DFECD1;
+$elapse-huntergreen: #516A4D;
+
+//blue
 $elapse-blue: #0086CB;
 $elapse-navy: #647F8C;
-$elapse-darknavy: #32434C;
+$elapse-darknavy: #485961;
+$elapse-skyblue: #F6FCFD;
+$elapse-darkskyblue: #D0EDF5;
 
 //Quotes
 $quotecolor: #c3c1c1;
@@ -19,14 +38,14 @@ $quotecolor: #c3c1c1;
 //Actual Navbar
 $navbar-elapse-border: #4A4644;
 $navbar-elapse-bg: #4A4644;
-$navbar-elapse-brand-color: #C3C1C1;
-$navbar-elapse-brand-hover-color: #fff;
+$navbar-elapse-brand-color: #fff;
+$navbar-elapse-brand-hover-color: #C3C1C1;
 $navbar-elapse-brand-hover-bg: #4A4644;
 $navbar-elapse-color: #C3C1C1;
-$navbar-elapse-link-color: #C3C1C1;
-$navbar-elapse-link-hover-color: #fff;
+$navbar-elapse-link-color: #fff;
+$navbar-elapse-link-hover-color: #C3C1C1;
 $navbar-elapse-link-hover-bg: #4A4644;
-$navbar-elapse-link-active-color: #C3C1C1;
+$navbar-elapse-link-active-color: #fff;
 $navbar-elapse-link-active-bg: #36312F;
 $navbar-elapse-link-disabled-color: #fff;
 $navbar-elapse-link-disabled-bg: #4A4644;

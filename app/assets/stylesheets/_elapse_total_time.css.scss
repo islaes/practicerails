@@ -1,0 +1,53 @@
+//Total Time Sidebar
+
+#total_time_sidebar {
+  padding: 5px 15px 0 10px;
+  //border: 1px solid #00f;
+
+  h2 {
+    font-size: 20px !important;
+    font-weight: 800;
+    letter-spacing: 1px;    
+  }
+  h5 {
+    width: 60%;
+    border-bottom: 1px solid #efefef;
+    margin-top: 20px;
+    font-weight: 800;
+  }
+  ul {
+    list-style-type: none; 
+    padding: 0;
+
+    li {
+      width: 60%;
+      border-bottom: 1px solid #efefef;
+      clear: both; 
+      line-height: 35px;
+
+      span.elapse-days-hours {
+        font-size: 25px;
+        color: $elapse-navy;
+        float: left;
+        width: 75px;
+      }
+      span.elapse-weeks-hours {
+        font-size: 25px;
+        color: $elapse-huntergreen;
+        float: left;
+        width: 75px;
+      }
+    }
+  }
+  button {
+    display: inline;
+    padding: 0 5px 0 5px;
+    margin: -3px 0 0 0;
+    height: 29px;
+    width: 100px;
+    color: $elapse-white;
+    background: $elapse-navy;
+    border: 1px solid $elapse-darknavy;  
+  }
+}
+
